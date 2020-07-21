@@ -1,0 +1,27 @@
+[
+    {
+        "transactionName": "login",
+        "rawStartTime": 1595262144825,
+        "rawEndTime": 1595262145016
+    },
+    {
+        "transactionName": "find_flight",
+        "rawStartTime": 1595262145020,
+        "rawEndTime": 1595262145274
+    },
+    {
+        "transactionName": "choose_flight",
+        "rawStartTime": 1595262145278,
+        "rawEndTime": 1595262145374
+    },
+    {
+        "transactionName": "fill_payment_details",
+        "rawStartTime": 1595262145378,
+        "rawEndTime": 1595262145493
+    },
+    {
+        "transactionName": "logout",
+        "rawStartTime": 1595262145497,
+        "rawEndTime": 1595262145631
+    }
+]

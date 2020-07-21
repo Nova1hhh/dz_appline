@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Николай\Documents\VuGen\Scripts\03_find_flight
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\николай\documents\vugen\scripts\03_find_flight\\logfile.log
+c:\users\николай\documents\vugen\scripts\03_find_flight\\combined_03_find_flight.c
+c:\users\николай\documents\vugen\scripts\03_find_flight\\pre_cci.c

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Николай\Documents\VuGen\Scripts\02_login
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\николай\documents\vugen\scripts\02_login\\logfile.log
+c:\users\николай\documents\vugen\scripts\02_login\\combined_02_login.c
+c:\users\николай\documents\vugen\scripts\02_login\\pre_cci.c

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\Николай\Documents\VuGen\Scripts\04_buy_ticket
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\николай\documents\vugen\scripts\04_buy_ticket\\logfile.log
+c:\users\николай\documents\vugen\scripts\04_buy_ticket\\combined_04_buy_ticket.c
+c:\users\николай\documents\vugen\scripts\04_buy_ticket\\pre_cci.c

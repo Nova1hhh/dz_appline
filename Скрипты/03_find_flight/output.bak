@@ -1,0 +1,28 @@
+Virtual User Script started at: 21.07.2020 19:03:56
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.55.0 for Windows 10; build 911 (июл 24 2017 19:46:00)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko  	[MsgId: MMSG-26988]
+Run-Time Settings file: "C:\Users\Николай\Documents\VuGen\Scripts\03_find_flight\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): Notify: Transaction "03_find_flight" started.
+Action.c(7): web_reg_save_param_attrib started  	[MsgId: MMSG-26355]
+Action.c(7): Registering web_reg_save_param_attrib was successful  	[MsgId: MMSG-26390]
+Action.c(18): web_url("WebTours") started  	[MsgId: MMSG-26355]
+Action.c(18): Detected non-resource "http://localhost:1080/WebTours/header.html" in "http://localhost:1080/WebTours/"  	[MsgId: MMSG-26574]
+Action.c(18): Detected non-resource "http://localhost:1080/cgi-bin/welcome.pl?signOff=true" in "http://localhost:1080/WebTours/"  	[MsgId: MMSG-26574]
+Action.c(18): Found resource "http://localhost:1080/WebTours/images/hp_logo.png" in HTML "http://localhost:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+Action.c(18): Found resource "http://localhost:1080/WebTours/images/webtours.png" in HTML "http://localhost:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+Action.c(18): Detected non-resource "http://localhost:1080/cgi-bin/nav.pl?in=home" in "http://localhost:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+Action.c(18): Detected non-resource "http://localhost:1080/WebTours/home.html" in "http://localhost:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+Action.c(18): Found resource "http://localhost:1080/WebTours/images/mer_login.gif" in HTML "http://localhost:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
+Action.c(18): Error: C interpreter run time error: Action.c (18):  Error -- memory violation : Exception ACCESS_VIOLATION received.
+Notify: Transaction "03_find_flight" ended with a "Stop" status (Duration: 1,0399 Wasted Time: 0,0392).
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

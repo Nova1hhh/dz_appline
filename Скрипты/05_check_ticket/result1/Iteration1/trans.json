@@ -1,0 +1,22 @@
+[
+    {
+        "transactionName": "login",
+        "rawStartTime": 1595266921133,
+        "rawEndTime": 1595266921338
+    },
+    {
+        "transactionName": "click_itinerary_button",
+        "rawStartTime": 1595266921342,
+        "rawEndTime": 1595266921570
+    },
+    {
+        "transactionName": "logout",
+        "rawStartTime": 1595266921574,
+        "rawEndTime": 1595266921764
+    },
+    {
+        "transactionName": "05_check_ticket",
+        "rawStartTime": 1595266920831,
+        "rawEndTime": 1595266921766
+    }
+]

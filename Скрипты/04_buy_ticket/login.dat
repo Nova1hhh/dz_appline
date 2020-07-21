@@ -1,0 +1,2 @@
+login,password,name,surname,address,city,card_num,exp_date,depart_city,arrival_city,return_date,seat_pref,seat_type,depart_date
+jojo,bean,Jojo,Bean,Green street,Moscow,0001 0000 0000 0000,01/20,London,Denver,07/21/2020,Window,First,01/21/2020
