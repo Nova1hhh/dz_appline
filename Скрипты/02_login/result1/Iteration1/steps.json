@@ -3,18 +3,18 @@
         "stepId": "STEP1",
         "stepName": "Url: WebTours",
         "infFile": "t1.inf",
-        "time": 1595262171848
+        "time": 1595991999818
     },
     {
         "stepId": "STEP2",
         "stepName": "Submit Data: login.pl",
         "infFile": "t2.inf",
-        "time": 1595262171999
+        "time": 1595991999975
     },
     {
         "stepId": "STEP3",
         "stepName": "Url: SignOff Button",
         "infFile": "t3.inf",
-        "time": 1595262172126
+        "time": 1595992000108
     }
 ]

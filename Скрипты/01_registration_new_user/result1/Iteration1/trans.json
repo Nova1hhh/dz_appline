@@ -1,27 +1,27 @@
 [
     {
         "transactionName": "main_page",
-        "rawStartTime": 1595980774903,
-        "rawEndTime": 1595980775141
+        "rawStartTime": 1595991979875,
+        "rawEndTime": 1595991980117
     },
     {
         "transactionName": "go_to_regpage",
-        "rawStartTime": 1595980775144,
-        "rawEndTime": 1595980775275
+        "rawStartTime": 1595991980121,
+        "rawEndTime": 1595991980249
     },
     {
         "transactionName": "registration",
-        "rawStartTime": 1595980775279,
-        "rawEndTime": 1595980775370
+        "rawStartTime": 1595991980253,
+        "rawEndTime": 1595991980340
     },
     {
         "transactionName": "logout",
-        "rawStartTime": 1595980775527,
-        "rawEndTime": 1595980775658
+        "rawStartTime": 1595991980483,
+        "rawEndTime": 1595991980610
     },
     {
         "transactionName": "01_registration_new_user",
-        "rawStartTime": 1595980774901,
-        "rawEndTime": 1595980775660
+        "rawStartTime": 1595991979873,
+        "rawEndTime": 1595991980612
     }
 ]

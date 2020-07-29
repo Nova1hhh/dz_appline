@@ -2596,6 +2596,8 @@ vuser_init()
 Action()
 {
 
+	lr_start_transaction("02_login");
+
  
  	web_reg_save_param_ex(
 		"ParamName=userSession",
@@ -2603,6 +2605,11 @@ Action()
 		"RB=\"/>",
 		"Ordinal=1",
 		"SEARCH_FILTERS",
+		"LAST");
+		
+	lr_start_transaction("main_page");
+	
+	web_reg_find("Text= A Session ID has been created and loaded",
 		"LAST");
 
 	web_url("WebTours", 
@@ -2614,10 +2621,15 @@ Action()
 		"Snapshot=t1.inf", 
 		"Mode=HTML", 
 		"LAST");
+	
+	lr_end_transaction("main_page", 2);
 
-	lr_think_time(18);
+	lr_think_time(5);
 
 	lr_start_transaction("login");
+	
+	web_reg_find("Text=User password was correct",
+		"LAST");
 
 	web_submit_data("login.pl",
 		"Action=http://localhost:1080/cgi-bin/login.pl",
@@ -2638,9 +2650,12 @@ Action()
 
 	lr_end_transaction("login",2);
 
-	lr_think_time(18);
+	lr_think_time(5);
 
 	lr_start_transaction("logout");
+	
+	web_reg_find("Text= A Session ID has been created",
+		"LAST");
 
 	web_url("SignOff Button", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
@@ -2653,6 +2668,8 @@ Action()
 		"LAST");
 
 	lr_end_transaction("logout",2);
+	
+	lr_end_transaction("02_login", 2);
 
 	return 0;
 }

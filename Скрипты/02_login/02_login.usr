@@ -51,7 +51,7 @@ vuser_init=cci
 Action=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="02_login__*delimiter*__login__*delimiter*__logout__*delimiter*__main_page"
+Order="02_login__*delimiter*__main_page__*delimiter*__login__*delimiter*__logout"
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
@@ -59,6 +59,6 @@ LastReplayedRunName=result1
 ActiveRunName=result1
 [Transactions]
 02_login=
+main_page=
 login=
 logout=
-main_page=

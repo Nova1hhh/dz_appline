@@ -1,12 +1,22 @@
 [
     {
+        "transactionName": "main_page",
+        "rawStartTime": 1595991999598,
+        "rawEndTime": 1595991999820
+    },
+    {
         "transactionName": "login",
-        "rawStartTime": 1595262171852,
-        "rawEndTime": 1595262172001
+        "rawStartTime": 1595991999824,
+        "rawEndTime": 1595991999976
     },
     {
         "transactionName": "logout",
-        "rawStartTime": 1595262172005,
-        "rawEndTime": 1595262172128
+        "rawStartTime": 1595991999980,
+        "rawEndTime": 1595992000109
+    },
+    {
+        "transactionName": "02_login",
+        "rawStartTime": 1595991999590,
+        "rawEndTime": 1595992000111
     }
 ]

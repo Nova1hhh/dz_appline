@@ -2611,6 +2611,9 @@ vuser_init()
 		
 	lr_start_transaction("main_page");
 	
+	web_reg_find("Text= A Session ID has been created and loaded",
+		"LAST");
+	
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours/", 
 		"TargetFrame=", 

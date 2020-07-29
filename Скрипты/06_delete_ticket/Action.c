@@ -56,6 +56,10 @@ Action()
 	lr_think_time(5);
 
 	lr_start_transaction("click_itinerary_button");
+	
+	web_reg_find("Fail=Found",
+		"Text=No flights have been reserved",
+		LAST);
 
 	web_reg_save_param("f_ID",
 		"LB=name=\"flightID\" value=\"",
@@ -78,6 +82,8 @@ Action()
 
 	lr_end_transaction("click_itinerary_button",LR_AUTO);
 
+//	lr_output_message(lr_eval_string("{f_ID_count}"));
+		
 	lr_think_time(5);
 
 	lr_start_transaction("delete_ticket");
@@ -87,13 +93,13 @@ Action()
 		LAST);
 
 	web_submit_form("itinerary.pl",
-		"Snapshot=t14.inf", 
-		ITEMDATA, 
-		"Name=1", "Value=on", ENDITEM,         
-		"Name=removeFlights.x", "Value=5", ENDITEM, 
-		"Name=removeFlights.y", "Value=9", ENDITEM, 
+	"Snapshot=t14.inf",
+	ITEMDATA,
+	"Name=1", "Value=on", ENDITEM,         
+	"Name=removeFlights.x", "Value=5", ENDITEM, 
+	"Name=removeFlights.y", "Value=9", ENDITEM, 
 		LAST);
-
+	                  
 	lr_end_transaction("delete_ticket",LR_AUTO);
 
 	lr_think_time(5);
