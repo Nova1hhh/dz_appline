@@ -2598,6 +2598,11 @@ Action()
 
 	lr_start_transaction("01_registration_new_user");
 	
+	lr_start_transaction("main_page");
+	
+	web_reg_find("Text= A Session ID has been created and loaded",
+		"LAST");
+
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours/", 
 		"TargetFrame=", 
@@ -2608,9 +2613,14 @@ Action()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_think_time(39);
+	lr_end_transaction("main_page", 2);
 
+	lr_think_time(5);
+	
 	lr_start_transaction("go_to_regpage");
+	
+	web_reg_find("Text=First time registering? Please complete the form below",
+		"LAST");
 
 	web_url("sign up now", 
 		"URL=http://localhost:1080/cgi-bin/login.pl?username=&password=&getInfo=true", 
@@ -2624,9 +2634,12 @@ Action()
 
 	lr_end_transaction("go_to_regpage",2);
 
-	lr_think_time(53);
+	lr_think_time(5);
 
 	lr_start_transaction("registration");
+
+	web_reg_find("Text=Welcome to Web Tours",
+		"LAST");
 
 	web_submit_data("login.pl", 
 		"Action=http://localhost:1080/cgi-bin/login.pl", 
@@ -2650,7 +2663,10 @@ Action()
 
 	lr_end_transaction("registration",2);
 
-	lr_think_time(6);
+	lr_think_time(5);
+
+	web_reg_find("Text=User has returned to the home page",
+		"LAST");
 
 	web_url("button_next.gif", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=menus", 
@@ -2665,6 +2681,9 @@ Action()
 	lr_think_time(22);
 
 	lr_start_transaction("logout");
+	
+	web_reg_find("Text= A Session ID has been created",
+		"LAST");
 
 	web_url("SignOff Button", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 

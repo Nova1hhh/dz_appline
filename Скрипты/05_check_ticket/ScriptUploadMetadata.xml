@@ -17,6 +17,7 @@
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name="05_check_ticket.c.pickle" Filter="1" />
     <FileEntry Name="05_check_ticket.ci" Filter="1" />
+    <FileEntry Name="05_check_ticket.prm.bak" Filter="1" />
     <FileEntry Name="05_check_ticket.sdf" Filter="1" />
     <FileEntry Name="138376507440.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />

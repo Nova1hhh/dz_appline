@@ -1,22 +1,27 @@
 [
     {
+        "transactionName": "main_page",
+        "rawStartTime": 1595989554786,
+        "rawEndTime": 1595989555039
+    },
+    {
         "transactionName": "login",
-        "rawStartTime": 1595266921133,
-        "rawEndTime": 1595266921338
+        "rawStartTime": 1595989555043,
+        "rawEndTime": 1595989555193
     },
     {
         "transactionName": "click_itinerary_button",
-        "rawStartTime": 1595266921342,
-        "rawEndTime": 1595266921570
+        "rawStartTime": 1595989555197,
+        "rawEndTime": 1595989555326
     },
     {
         "transactionName": "logout",
-        "rawStartTime": 1595266921574,
-        "rawEndTime": 1595266921764
+        "rawStartTime": 1595989555330,
+        "rawEndTime": 1595989555455
     },
     {
         "transactionName": "05_check_ticket",
-        "rawStartTime": 1595266920831,
-        "rawEndTime": 1595266921766
+        "rawStartTime": 1595989554780,
+        "rawEndTime": 1595989555457
     }
 ]

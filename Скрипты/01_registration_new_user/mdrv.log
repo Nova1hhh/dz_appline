@@ -1,0 +1,83 @@
+Action.c(93):     <br/><small>\n
+Action.c(93):     This product uses parts of the SMT Kernel, Copyright (c) 1991-99 <A href="http://www.imati
+Action.c(93):     x.com" target="new"><B><small>iMatix Corporation</small></B></A> \n
+Action.c(93):     </small>\n
+Action.c(93):     </blockquote></TD>\n
+Action.c(93):     <TD></TD></TR>\n
+Action.c(93):     </table>\n
+Action.c(93):     </body>\n
+Action.c(93):     </HTML>\n
+Action.c(93): t=23946ms: 5-byte chunked response overhead for "http://localhost:1080/cgi-bin/welcome.pl?signOff=1" (RelFrameId=1, Internal ID=636)
+Action.c(93):     0\r\n
+Action.c(93):     \r\n
+Action.c(93): t=23980ms: 255-byte response headers for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=637)
+Action.c(93):     HTTP/1.1 200 OK\r\n
+Action.c(93):     Date: Tue, 28 Jul 2020 23:59:58 GMT\r\n
+Action.c(93):     Server: Apache/2.2.21 (Win32)\r\n
+Action.c(93):     Expires: Mon, 27 Jul 2020 23:59:58 GMT\r\n
+Action.c(93):     Keep-Alive: timeout=5, max=95\r\n
+Action.c(93):     Connection: Keep-Alive\r\n
+Action.c(93):     Transfer-Encoding: chunked\r\n
+Action.c(93):     Content-Type: text/html; charset=ISO-8859-1\r\n
+Action.c(93):     \r\n
+Action.c(93): t=23981ms: 5-byte chunked response overhead for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=637)
+Action.c(93):     5d1\r\n
+Action.c(93): t=23981ms: 2-byte chunked response overhead for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=637)
+Action.c(93):     \r\n
+Action.c(93): t=23982ms: 1489-byte chunked response body for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=637)
+Action.c(93):     <!DOCTYPE html\n
+Action.c(93):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+Action.c(93):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+Action.c(93):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+Action.c(93):     <head>\n
+Action.c(93):     <title>Web Tours Navigation Bar</title>\n
+Action.c(93):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+Action.c(93):     </head>\n
+Action.c(93):     <body bgcolor="#E0E7F1">\n
+Action.c(93):     <style>\n
+Action.c(93):     blockquote {font-family: tahoma; font-size : 10pt}\n
+Action.c(93):     H1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+Action.c(93):     H3 {font-family: tahoma; font-size : 10pt; color: black}\n
+Action.c(93):     small {font-family: tahoma; font-size : 8pt}\n
+Action.c(93):     </style>\n
+Action.c(93):     <form method="post" action="/cgi-bin/login.pl" target="body">\n
+Action.c(93):     <input type="hidden" name="userSession" value="129281.555123532zztQQVQpQQVzzzzHDQiQQpfVQQf
+Action.c(93):     "/>\n
+Action.c(93):     <table border="0"><tr><td>&nbsp;</td>\n
+Action.c(93):     <td>&nbsp;</td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td>&nbsp;</td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td><small>&nbsp;Username</small></td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td><small>&nbsp;Password</small></td>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td>&nbsp;</td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td>\n
+Action.c(93):     <td><input type="image" name="login" value="Login" alt="Login" border="1" \n
+Action.c(93):     src="/WebTours/images/mer_login.gif"/></td></tr>\n
+Action.c(93):     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>\n
+Action.c(93):     </table><input type="hidden" name="JSFormSubmit" value="off"/>\n
+Action.c(93):     </form>\n
+Action.c(93):     \n
+Action.c(93):     </body>\n
+Action.c(93):     </html>\n
+Action.c(93): Resource "http://localhost:1080/WebTours/images/mer_login.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.c(93): t=23984ms: 5-byte chunked response overhead for "http://localhost:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=637)
+Action.c(93):     0\r\n
+Action.c(93):     \r\n
+Action.c(93): Registered web_reg_find successful for "Text= A Session ID has been created" (count=1)  	[MsgId: MMSG-26364]
+Action.c(93): web_url("SignOff Button") was successful, 2175 body bytes, 582 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(103): Notify: Transaction "logout" ended with a "Pass" status (Duration: 0.1899 Wasted Time: 0.0873).
+Action.c(105): Notify: Transaction "01_registration_new_user" ended with a "Pass" status (Duration: 0.9601 Wasted Time: 0.4349).
+Ending action Action.
+Ending iteration 29.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 516), ended OK."

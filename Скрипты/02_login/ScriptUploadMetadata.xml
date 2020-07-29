@@ -17,6 +17,7 @@
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name="02_login.c.pickle" Filter="1" />
     <FileEntry Name="02_login.ci" Filter="1" />
+    <FileEntry Name="02_login.prm.bak" Filter="1" />
     <FileEntry Name="02_login.sdf" Filter="1" />
     <FileEntry Name="138376507440.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />

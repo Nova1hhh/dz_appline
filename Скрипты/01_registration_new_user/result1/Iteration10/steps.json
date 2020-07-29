@@ -1,0 +1,32 @@
+[
+    {
+        "stepId": "STEP46",
+        "stepName": "Url: WebTours",
+        "infFile": "t1.inf",
+        "time": 1595980781536
+    },
+    {
+        "stepId": "STEP47",
+        "stepName": "Url: sign up now",
+        "infFile": "t2.inf",
+        "time": 1595980781698
+    },
+    {
+        "stepId": "STEP48",
+        "stepName": "Submit Data: login.pl",
+        "infFile": "t3.inf",
+        "time": 1595980781829
+    },
+    {
+        "stepId": "STEP49",
+        "stepName": "Url: button_next.gif",
+        "infFile": "t4.inf",
+        "time": 1595980781995
+    },
+    {
+        "stepId": "STEP50",
+        "stepName": "Url: SignOff Button",
+        "infFile": "t5.inf",
+        "time": 1595980782164
+    }
+]

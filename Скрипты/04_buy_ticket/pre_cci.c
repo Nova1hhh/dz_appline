@@ -2596,7 +2596,7 @@ vuser_init()
  Action()
 {
 
-
+	lr_start_transaction("04_buy_ticket");
 
  
 
@@ -2608,7 +2608,9 @@ vuser_init()
 		"Ordinal=1",
 		"SEARCH_FILTERS",
 		"LAST");
-
+		
+	lr_start_transaction("main_page");
+	
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours/", 
 		"TargetFrame=", 
@@ -2619,7 +2621,9 @@ vuser_init()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_think_time(11);
+	lr_end_transaction("main_page", 2);
+	
+	lr_think_time(5);
 
 	lr_start_transaction("login");
 
@@ -2645,9 +2649,9 @@ vuser_init()
 
 	lr_end_transaction("login",2);
 
-	lr_think_time(24);
+	lr_think_time(5);
 
-	lr_start_transaction("find_flight");
+	lr_start_transaction("click_flights");
 
 	web_reg_find("Text/IC=Search Flights Button",
 		"LAST");
@@ -2662,8 +2666,12 @@ vuser_init()
 		"Mode=HTML", 
 		"LAST");
 
-	lr_think_time(31);
-
+	lr_end_transaction("click_flights",2);
+	
+	lr_think_time(5);
+	
+	lr_start_transaction("fill_forms");
+	
 	web_reg_find("Text/IC=Flight Selections",
 		"LAST");
 
@@ -2676,6 +2684,9 @@ vuser_init()
 		"Type=radio",
 		"SEARCH_FILTERS",
 		"IgnoreRedirections=No",
+		"LAST");
+
+	web_reg_find("Text=Flight departing from <B>{depart_city}</B> to <B>{arrival_city}</B>",
 		"LAST");
 
 	web_submit_data("reservations.pl", 
@@ -2702,9 +2713,9 @@ vuser_init()
 		"Name=findFlights.y", "Value=11", "ENDITEM", 
 		"LAST");
 
-	lr_end_transaction("find_flight",2);
+	lr_end_transaction("fill_forms",2);
 
-	lr_think_time(39);
+	lr_think_time(5);
 
 	lr_start_transaction("choose_flight");
 	
@@ -2731,11 +2742,14 @@ vuser_init()
 
 	lr_end_transaction("choose_flight",2);
 
-	lr_think_time(55);
+	lr_think_time(5);
 
 	lr_start_transaction("fill_payment_details");
 
 	web_reg_find("Text/IC=Thank you for booking",
+		"LAST");
+
+	web_reg_find("Text=from {depart_city} to {arrival_city}",
 		"LAST");
 
 	web_submit_data("reservations.pl_3",
@@ -2769,7 +2783,7 @@ vuser_init()
 
 	lr_end_transaction("fill_payment_details",2);
 
-	lr_think_time(32);
+	lr_think_time(5);
 
 	lr_start_transaction("logout");
 
@@ -2787,6 +2801,8 @@ vuser_init()
 		"LAST");
 
 	lr_end_transaction("logout",2);
+	
+	lr_end_transaction("04_buy_ticket", 2);
 
 	return 0;
 }

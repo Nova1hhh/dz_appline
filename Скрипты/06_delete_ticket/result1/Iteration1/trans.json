@@ -1,0 +1,32 @@
+[
+    {
+        "transactionName": "main_page",
+        "rawStartTime": 1595990599951,
+        "rawEndTime": 1595990600176
+    },
+    {
+        "transactionName": "login",
+        "rawStartTime": 1595990600180,
+        "rawEndTime": 1595990600323
+    },
+    {
+        "transactionName": "click_itinerary_button",
+        "rawStartTime": 1595990600327,
+        "rawEndTime": 1595990600500
+    },
+    {
+        "transactionName": "delete_ticket",
+        "rawStartTime": 1595990600504,
+        "rawEndTime": 1595990600595
+    },
+    {
+        "transactionName": "logout",
+        "rawStartTime": 1595990600599,
+        "rawEndTime": 1595990600719
+    },
+    {
+        "transactionName": "06_delete_ticket",
+        "rawStartTime": 1595990599945,
+        "rawEndTime": 1595990600721
+    }
+]

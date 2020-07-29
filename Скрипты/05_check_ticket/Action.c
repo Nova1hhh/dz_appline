@@ -11,7 +11,12 @@ Action()
 		"Ordinal=1",
 		SEARCH_FILTERS,
 		LAST);
+		
+	lr_start_transaction("main_page");
 
+	web_reg_find("Text= A Session ID has been created and loaded",
+		LAST);
+	
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours/", 
 		"TargetFrame=", 
@@ -21,10 +26,15 @@ Action()
 		"Snapshot=t1.inf", 
 		"Mode=HTML", 
 		LAST);
-
-	lr_think_time(11);
+	
+	lr_end_transaction("main_page", LR_AUTO);
+	
+	lr_think_time(5);
 
 	lr_start_transaction("login");
+
+	web_reg_find("Text=User password was correct",
+		LAST);
 
 	web_submit_data("login.pl",
 		"Action=http://localhost:1080/cgi-bin/login.pl",
@@ -45,7 +55,7 @@ Action()
 
 	lr_end_transaction("login",LR_AUTO);
 
-	lr_think_time(34);
+	lr_think_time(5);
 
 	lr_start_transaction("click_itinerary_button");
 
@@ -64,11 +74,14 @@ Action()
 
 	lr_end_transaction("click_itinerary_button",LR_AUTO);
 
-	lr_think_time(13);
+	lr_think_time(5);
 
 	lr_start_transaction("logout");
 
-	web_url("SignOff Button", 
+	web_reg_find("Text/IC= A Session ID has been created",
+		LAST);
+	
+	web_url("SignOff Button",
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
 		"TargetFrame=body", 
 		"Resource=0", 

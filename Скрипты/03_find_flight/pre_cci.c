@@ -2605,7 +2605,12 @@ Action()
 		"Ordinal=1",
 		"SEARCH_FILTERS",
 		"LAST");
-
+	
+	lr_start_transaction("main_page");
+	
+	web_reg_find("Text= A Session ID has been created and loaded",
+		"LAST");
+	
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours/", 
 		"TargetFrame=", 
@@ -2615,10 +2620,15 @@ Action()
 		"Snapshot=t1.inf", 
 		"Mode=HTML", 
 		"LAST");
-
-	lr_think_time(18);
+	
+	lr_end_transaction("main_page", 2);
+	
+	lr_think_time(5);
 
 	lr_start_transaction("login");
+
+	web_reg_find("Text=User password was correct",
+		"LAST");
 
 	web_submit_data("login.pl",
 		"Action=http://localhost:1080/cgi-bin/login.pl",
@@ -2639,9 +2649,12 @@ Action()
 
 	lr_end_transaction("login",2);
 
-	lr_think_time(29);
+	lr_think_time(5);
 
 	lr_start_transaction("click_flights");
+
+	web_reg_find("Text= User has returned to the search page",
+		"LAST");
 
 	web_url("Search Flights Button", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=search", 
@@ -2655,9 +2668,15 @@ Action()
 
 	lr_end_transaction("click_flights",2);
 
-	lr_think_time(138);
+	lr_think_time(5);
 
 	lr_start_transaction("fill_forms");
+
+	web_reg_find("Text=Flight Selections",
+		"LAST");
+
+	web_reg_find("Text=Flight departing from <B>{depart_city}</B> to <B>{arrival_city}</B>",
+		"LAST");
 
 	web_submit_data("reservations.pl", 
 		"Action=http://localhost:1080/cgi-bin/reservations.pl", 
@@ -2685,9 +2704,12 @@ Action()
 
 	lr_end_transaction("fill_forms",2);
 
-	lr_think_time(28);
+	lr_think_time(5);
 
 	lr_start_transaction("logout");
+
+	web_reg_find("Text=A Session ID has been created",
+		"LAST");
 
 	web_url("SignOff Button", 
 		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 

@@ -1,0 +1,27 @@
+[
+    {
+        "transactionName": "main_page",
+        "rawStartTime": 1595980797892,
+        "rawEndTime": 1595980798096
+    },
+    {
+        "transactionName": "go_to_regpage",
+        "rawStartTime": 1595980798101,
+        "rawEndTime": 1595980798279
+    },
+    {
+        "transactionName": "registration",
+        "rawStartTime": 1595980798283,
+        "rawEndTime": 1595980798427
+    },
+    {
+        "transactionName": "logout",
+        "rawStartTime": 1595980798658,
+        "rawEndTime": 1595980798848
+    },
+    {
+        "transactionName": "01_registration_new_user",
+        "rawStartTime": 1595980797890,
+        "rawEndTime": 1595980798850
+    }
+]

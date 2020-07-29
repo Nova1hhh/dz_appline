@@ -13,7 +13,12 @@
 		"Ordinal=1",
 		SEARCH_FILTERS,
 		LAST);
-
+		
+	lr_start_transaction("main_page");
+	
+	web_reg_find("Text= A Session ID has been created and loaded",
+		LAST);
+	
 	web_url("WebTours", 
 		"URL=http://localhost:1080/WebTours/", 
 		"TargetFrame=", 
@@ -24,7 +29,9 @@
 		"Mode=HTML", 
 		LAST);
 
-	lr_think_time(11);
+	lr_end_transaction("main_page", LR_AUTO);
+	
+	lr_think_time(5);
 
 	lr_start_transaction("login");
 
@@ -50,9 +57,9 @@
 
 	lr_end_transaction("login",LR_AUTO);
 
-	lr_think_time(24);
+	lr_think_time(5);
 
-	lr_start_transaction("find_flight");
+	lr_start_transaction("click_flights");
 
 	web_reg_find("Text/IC=Search Flights Button",
 		LAST);
@@ -67,8 +74,12 @@
 		"Mode=HTML", 
 		LAST);
 
-	lr_think_time(31);
-
+	lr_end_transaction("click_flights",LR_AUTO);
+	
+	lr_think_time(5);
+	
+	lr_start_transaction("fill_forms");
+	
 	web_reg_find("Text/IC=Flight Selections",
 		LAST);
 
@@ -81,6 +92,9 @@
 		"Type=radio",
 		SEARCH_FILTERS,
 		"IgnoreRedirections=No",
+		LAST);
+
+	web_reg_find("Text=Flight departing from <B>{depart_city}</B> to <B>{arrival_city}</B>",
 		LAST);
 
 	web_submit_data("reservations.pl", 
@@ -107,9 +121,9 @@
 		"Name=findFlights.y", "Value=11", ENDITEM, 
 		LAST);
 
-	lr_end_transaction("find_flight",LR_AUTO);
+	lr_end_transaction("fill_forms",LR_AUTO);
 
-	lr_think_time(39);
+	lr_think_time(5);
 
 	lr_start_transaction("choose_flight");
 	
@@ -136,11 +150,14 @@
 
 	lr_end_transaction("choose_flight",LR_AUTO);
 
-	lr_think_time(55);
+	lr_think_time(5);
 
 	lr_start_transaction("fill_payment_details");
 
 	web_reg_find("Text/IC=Thank you for booking",
+		LAST);
+
+	web_reg_find("Text=from {depart_city} to {arrival_city}",
 		LAST);
 
 	web_submit_data("reservations.pl_3",
@@ -174,7 +191,7 @@
 
 	lr_end_transaction("fill_payment_details",LR_AUTO);
 
-	lr_think_time(32);
+	lr_think_time(5);
 
 	lr_start_transaction("logout");
 
@@ -192,6 +209,7 @@
 		LAST);
 
 	lr_end_transaction("logout",LR_AUTO);
+	
 	lr_end_transaction("04_buy_ticket", LR_AUTO);
 
 	return 0;
