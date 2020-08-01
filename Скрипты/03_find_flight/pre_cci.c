@@ -2703,25 +2703,50 @@ Action()
 		"LAST");
 
 	lr_end_transaction("fill_forms",2);
-
-	lr_think_time(5);
-
-	lr_start_transaction("logout");
-
-	web_reg_find("Text=A Session ID has been created",
+	
+	lr_start_transaction("choose_flight");
+	
+	web_reg_find("Text/IC=Flight Reservation",
 		"LAST");
 
-	web_url("SignOff Button", 
-		"URL=http://localhost:1080/cgi-bin/welcome.pl?signOff=1", 
-		"TargetFrame=body", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights", 
-		"Snapshot=t5.inf", 
-		"Mode=HTML", 
+	web_submit_data("reservations.pl_2",
+		"Action=http://localhost:1080/cgi-bin/reservations.pl",
+		"Method=POST",
+		"TargetFrame=",
+		"RecContentType=text/html",
+		"Referer=http://localhost:1080/cgi-bin/reservations.pl",
+		"Snapshot=t5.inf",
+		"Mode=HTML",
+		"ITEMDATA",
+		"Name=outboundFlight", "Value={outboundFlight}", "ENDITEM",
+		"Name=numPassengers", "Value=1", "ENDITEM",
+		"Name=advanceDiscount", "Value=0", "ENDITEM",
+		"Name=seatType", "Value={seat_type}", "ENDITEM",
+		"Name=seatPref", "Value={seat_pref}", "ENDITEM",
+		"Name=reserveFlights.x", "Value=22", "ENDITEM",
+		"Name=reserveFlights.y", "Value=7", "ENDITEM",
 		"LAST");
 
-	lr_end_transaction("logout",2);
+	lr_end_transaction("choose_flight",2);
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 	lr_end_transaction("03_find_flight", 2);
 

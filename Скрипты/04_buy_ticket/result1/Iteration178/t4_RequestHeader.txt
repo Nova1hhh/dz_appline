@@ -1,0 +1,12 @@
+POST /cgi-bin/reservations.pl HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Referer: http://localhost:1080/cgi-bin/reservations.pl?page=welcome
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: ru,en-US;q=0.7,en;q=0.3
+Accept: */*
+Connection: Keep-Alive
+Host: localhost:1080
+Cookie: MSO=SID&1596262906; MTUserInfo=firstName&Jojo27&address2&Moscow27&username&jojo27&hash&119&lastName&Bean27%0A&address1&Green%20street27&creditCard&&expDate&%0A
+Content-Length: 240
+

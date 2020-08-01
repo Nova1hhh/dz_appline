@@ -1,0 +1,4 @@
+"firstName=Jojo24&lastName=Bean24&address1=Green+street24&address2=Moscow24&pass1=Jojo24+Bean24"
+"&creditCard=1134+2222+3333+0001&expDate=03%2F42&oldCCOption=&numPassengers=1&seatType=Business"
+"&seatPref=None&outboundFlight=140%3B186%3B08%2F05%2F2020&advanceDiscount=0&returnFlight=&JSFor"
+"mSubmit=off&.cgifields=saveCC&buyFlights.x=67&buyFlights.y=8"

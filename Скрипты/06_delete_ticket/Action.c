@@ -1,3 +1,4 @@
+int result;
 Action()
 {
 	lr_start_transaction("06_delete_ticket");
@@ -56,18 +57,12 @@ Action()
 	lr_think_time(5);
 
 	lr_start_transaction("click_itinerary_button");
-	
-	web_reg_find("Fail=Found",
-		"Text=No flights have been reserved",
-		LAST);
 
 	web_reg_save_param("f_ID",
 		"LB=name=\"flightID\" value=\"",
-		"RB=\"  />",
+		"RB=-",
 		"Ord=ALL",
-		LAST);
-	
-	web_reg_find("Text=User wants the intineraries.",
+		"NotFound=WARNING",
 		LAST);
 
 	web_url("Itinerary Button", 
@@ -79,31 +74,34 @@ Action()
 		"Snapshot=t13.inf", 
 		"Mode=HTML", 
 		LAST);
-
-	lr_end_transaction("click_itinerary_button",LR_AUTO);
-
-//	lr_output_message(lr_eval_string("{f_ID_count}"));
 		
-	lr_think_time(5);
-
-	lr_start_transaction("delete_ticket");
+	lr_end_transaction("click_itinerary_button",LR_AUTO);
 	
-	web_reg_find("Fail=Found",
-		"Text={f_ID_1}",
-		LAST);
-
-	web_submit_form("itinerary.pl",
-	"Snapshot=t14.inf",
-	ITEMDATA,
-	"Name=1", "Value=on", ENDITEM,         
-	"Name=removeFlights.x", "Value=5", ENDITEM, 
-	"Name=removeFlights.y", "Value=9", ENDITEM, 
-		LAST);
-	                  
-	lr_end_transaction("delete_ticket",LR_AUTO);
-
 	lr_think_time(5);
+	
+    result = strcmp(lr_eval_string("{f_ID_count}"), "0"); 
+    
+    if (result != 0){
+    	 	
+        lr_start_transaction("delete_ticket");
 
+		web_reg_find("Fail=Found",
+			"Text={f_ID_1}",
+			LAST);
+        
+		web_submit_form("itinerary.pl",
+		"Snapshot=t14.inf",
+		ITEMDATA,
+		"Name=1", "Value=on", ENDITEM,         
+		"Name=removeFlights.x", "Value=5", ENDITEM, 
+		"Name=removeFlights.y", "Value=9", ENDITEM, 
+			LAST);
+		
+		lr_end_transaction("delete_ticket",LR_AUTO);
+		
+		lr_think_time(5);
+    }
+    
 	lr_start_transaction("logout");
 
 	web_reg_find("Text/IC= A Session ID has been created",

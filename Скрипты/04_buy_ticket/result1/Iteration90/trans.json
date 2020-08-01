@@ -1,0 +1,42 @@
+[
+    {
+        "transactionName": "main_page",
+        "rawStartTime": 1596262401332,
+        "rawEndTime": 1596262401817
+    },
+    {
+        "transactionName": "login",
+        "rawStartTime": 1596262401821,
+        "rawEndTime": 1596262402316
+    },
+    {
+        "transactionName": "click_flights",
+        "rawStartTime": 1596262402320,
+        "rawEndTime": 1596262402796
+    },
+    {
+        "transactionName": "fill_forms",
+        "rawStartTime": 1596262402800,
+        "rawEndTime": 1596262403241
+    },
+    {
+        "transactionName": "choose_flight",
+        "rawStartTime": 1596262403245,
+        "rawEndTime": 1596262403676
+    },
+    {
+        "transactionName": "fill_payment_details",
+        "rawStartTime": 1596262403680,
+        "rawEndTime": 1596262404142
+    },
+    {
+        "transactionName": "logout",
+        "rawStartTime": 1596262404146,
+        "rawEndTime": 1596262404622
+    },
+    {
+        "transactionName": "04_buy_ticket",
+        "rawStartTime": 1596262401327,
+        "rawEndTime": 1596262404624
+    }
+]

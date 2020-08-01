@@ -2679,14 +2679,19 @@ vuser_init()
 		"LAST");
 
  
-	web_reg_save_param_attrib(
-		"ParamName=outboundFlight",
-		"TagName=input",
-		"Extract=value",
-		"Name=outboundFlight",
-		"Type=radio",
-		"SEARCH_FILTERS",
-		"IgnoreRedirections=No",
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+		
+	web_reg_save_param("outboundFlight",
+		"LB=name=\"outboundFlight\" value=\"",
+		"RB=\"",
 		"LAST");
 
 	web_reg_find("Text=Flight departing from <B>{depart_city}</B> to <B>{arrival_city}</B>",
@@ -2703,9 +2708,9 @@ vuser_init()
 		"ITEMDATA", 
 		"Name=advanceDiscount", "Value=0", "ENDITEM", 
 		"Name=depart", "Value={depart_city}", "ENDITEM", 
-		"Name=departDate", "Value={depart_date}", "ENDITEM", 
+		"Name=departDate", "Value={depart_date_new}", "ENDITEM", 
 		"Name=arrive", "Value={arrival_city}", "ENDITEM", 
-		"Name=returnDate", "Value={return_date}", "ENDITEM", 
+		"Name=returnDate", "Value={return_date_new}", "ENDITEM", 
 		"Name=numPassengers", "Value=1", "ENDITEM", 
 		"Name=seatPref", "Value={seat_pref}", "ENDITEM", 
 		"Name=seatType", "Value={seat_type}", "ENDITEM", 
