@@ -1,11 +1,11 @@
 ﻿[BasicInfo]
-Title=Hits per Second
-TemplateName=HitsperSecond
+Title=Throughput
+TemplateName=Throughput
 ChartType=Simple
-Description=Displays the number of hits made on the Web server by Vusers during each second of the load test. This graph helps you evaluate the amount of load Vusers generate, in terms of the number of hits.
-HelpContext=516
+Description=Displays the amount of throughput (in bytes) on the Web server during the load test. Throughput represents the amount of data that the Vusers received from the server at any given second. This graph helps you to evaluate the amount of load Vusers generate, in terms of server throughput.
+HelpContext=517
 EventType=Web
-EventName=Hits,HTTP*
+EventName=Throughput
 ChartGroup=Web Server Resources
 PerformanceClass=Network
 CustomData=
@@ -29,7 +29,7 @@ ActionClearFilterEnabled=0
 ChartFile=C:\Users\Николай\dev\appline_dz\Результаты\поиск максимума\Result0_Graph1.cfg
 View3D=0
 IntLegendVisible=0
-Chart3dPercent=10
+Chart3dPercent=1
 Pen_Style=0
 Pen_SmallDots=0
 Pen_Visible=1
@@ -40,7 +40,7 @@ DefaultDisplayType=Line
 UserGranularity=1
 RoundBarValues=0
 GraphDataCol1=
-TableName=T694677146T
+TableName=T104859528T
 BasicTableName=
 AbsoluteTime=0
 DisableFilter=0
@@ -61,7 +61,7 @@ HiddenDimensions=
 BasicGroupBy=Web Server Resource Name
 AdditionalGroupBy=
 HasGranularity=1
-YLeftAxisTitle=Hits per Second
+YLeftAxisTitle=Bytes per Second
 YRightAxisTitle=
 TimeBasedXAxis=1
 XBottomAxisTitle=Elapsed scenario time hh:mm
@@ -99,7 +99,7 @@ LikeMode=0
 DimensionType=Discrete
 InternalDimName=
 Dimension=Event Name
-EqualFlag=0
+EqualFlag=1
 DimensionTableName=Event_Map
 NumValues=1
 UseEscapeSequence=1
@@ -108,7 +108,7 @@ Dim_0=Throughput
 LikeMode=0
 
 [Filter Data]
-SingleValue=Hits
+SingleValue=Throughput
 
 [DimensionFunctions]
 DimeFuncCount=0
@@ -116,8 +116,8 @@ DimeFuncCount=0
 [Granularity]
 Dimension=Scenario Elapsed Time
 TimeScaleType=2
-Granularity=128
-BaseGranularityUIName=Hits
+Granularity=5
+BaseGranularityUIName=Throughput
 MinimumDefaultGranularity=5
 
 [Alerts]

@@ -34,7 +34,7 @@ MonAgg=0
 ErrAgg=0
 FilterEdge=0
 FSartTime=0
-FEndTime=84600
+FEndTime=0
 
 [Result0]
 LRRID=
@@ -59,8 +59,13 @@ Schedule Name=Schedule 1
 Mode=Scenario Scheduling
 Load Behavior=Initialize each Vuser just before it runs
 Scenario Duration=Start 8 Vusers: 1 every 00:00:10 (HH:MM:SS); Run for 00:22:00 (HH:MM:SS); Start 8 Vusers: 1 every 00:00:02 (HH:MM:SS); Run for 00:22:00 (HH:MM:SS); Start 8 Vusers: 1 every 00:00:02 (HH:MM:SS); Run for 00:22:00 (HH:MM:SS); Start 8 Vusers: 1 every 00:00:02 (HH:MM:SS); Run for 00:22:00 (HH:MM:SS); Start 8 Vusers: 1 every 00:00:02 (HH:MM:SS); Run for 00:22:00 (HH:MM:SS); Stop all Vusers: 1 every 00:00:03 (HH:MM:SS)
-NumGraphs=5
+NumGraphs=22
 
 [DimensionFunctions]
-DimeFuncCount=0
+DimeFuncCount=1
+DimeFuncType0=FuncFragment
+FunctionName_UI0=Think Time
+DimensionName_UI0=Transaction Response Time,Aminimum,Amaximum
+FunctionFragmentValues_UI0=-Include Think Time
+DimensionFragmentValues_UI0=!([Value]-[Think Time])!
 

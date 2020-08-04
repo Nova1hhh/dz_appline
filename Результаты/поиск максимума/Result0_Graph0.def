@@ -1,13 +1,13 @@
 ﻿[BasicInfo]
-Title=Running Vusers
-TemplateName=VuserStateGraph
+Title=Hits per Second
+TemplateName=HitsperSecond
 ChartType=Simple
-Description=Displays the number of Vusers that executed Vuser scripts, and their status, during each second of a load test. This graph is useful for determining the Vuser load on your server at any given moment.
-HelpContext=511
-EventType=
-EventName=
-ChartGroup=Vusers
-PerformanceClass=General
+Description=Displays the number of hits made on the Web server by Vusers during each second of the load test. This graph helps you evaluate the amount of load Vusers generate, in terms of the number of hits.
+HelpContext=516
+EventType=Web
+EventName=Hits,HTTP*
+ChartGroup=Web Server Resources
+PerformanceClass=Network
 CustomData=
 
 [TabSheet]
@@ -29,93 +29,96 @@ ActionClearFilterEnabled=0
 ChartFile=C:\Users\Николай\dev\appline_dz\Результаты\поиск максимума\Result0_Graph0.cfg
 View3D=0
 IntLegendVisible=0
-Chart3dPercent=10
+Chart3dPercent=1
 Pen_Style=0
 Pen_SmallDots=0
 Pen_Visible=1
 Pen_Width=1
 Pen_Color=0
-MainFactTableName=VuserEvent_meter
+MainFactTableName=WebEvent_meter
 DefaultDisplayType=Line
 UserGranularity=1
 RoundBarValues=0
 GraphDataCol1=
-TableName=T694674879T
+TableName=T104859518T
 BasicTableName=
 AbsoluteTime=0
 DisableFilter=0
 SetPieToPercent=0
 DescFromFID=0
 NumSelectStrings=1
-ProduceRealStatis=0
-CompleteMissingValuesWithZeroes=0
+ProduceRealStatis=1
+CompleteMissingValuesWithZeroes=1
 CompleteMissingValues=0
 ForceCompleteValsOnArea=1
 IdsToStrs=1
 StdMonitor=0
 HiddenFunctions=
-NumBasicFilters=0
-NumAdditionalFilters=1
-NumRawDataFilters=1
+NumBasicFilters=2
+NumAdditionalFilters=0
+NumRawDataFilters=0
 HiddenDimensions=
-BasicGroupBy=Vuser Status
+BasicGroupBy=Web Server Resource Name
 AdditionalGroupBy=
 HasGranularity=1
-YLeftAxisTitle=Number of Vusers
+YLeftAxisTitle=Hits per Second
 YRightAxisTitle=
 TimeBasedXAxis=1
 XBottomAxisTitle=Elapsed scenario time hh:mm
 XTopAxisTitle=
-DisplayAsStairs=1
+DisplayAsStairs=0
 RawDataDimension=Scenario Elapsed Time
 Scaling=0
-ZeroValue=1
-CompleteValFromLast=1
+ZeroValue=0
+CompleteValFromLast=0
 Stacked=0
 BreakdownTree=0
 TransactionBreakdownGraph=0
 
 [SelectString0]
-Dimension=InOut Flag
-CountField=
-AggregateFunction=Sum
-ResultSetAggregateFunction=AggSum
+Dimension=![Value]!
+CountField=![Acount]!
+AggregateFunction=SumG
+ResultSetAggregateFunction=Y Value
 Title=
 ActiveState=1
 
-[AdditionalFilter0]
+[BasicFilter0]
 DimensionType=Discrete
 InternalDimName=
-Dimension=Vuser Status
+Dimension=Event Type
 EqualFlag=1
-DimensionTableName=VuserStatus
+DimensionTableName=Event_Map
 NumValues=1
 UseEscapeSequence=1
 DimCount=1
-Dim_0=Run
+Dim_0=Web
 LikeMode=0
+
+[BasicFilter1]
+DimensionType=Discrete
+InternalDimName=
+Dimension=Event Name
+EqualFlag=0
+DimensionTableName=Event_Map
+NumValues=1
+UseEscapeSequence=1
+DimCount=1
+Dim_0=Throughput
+LikeMode=0
+
+[Filter Data]
+SingleValue=Hits
 
 [DimensionFunctions]
 DimeFuncCount=0
 
-[RawDataFilter0]
-DimensionType=DiscreteNumber
-InternalDimName=
-Dimension=InOut Flag
-EqualFlag=1
-DimensionTableName=VuserEvent_Meter
-NumValues=1
-UseEscapeSequence=1
-DimCount=1
-Dim_0=1
-LikeMode=0
-
 [Granularity]
 Dimension=Scenario Elapsed Time
 TimeScaleType=2
-Granularity=128
-BaseGranularityUIName=
-MinimumDefaultGranularity=1
+Granularity=5
+BaseGranularityUIName=Hits
+MinimumDefaultGranularity=5
 
 [Alerts]
 Number Of Alerts=0
@@ -137,8 +140,8 @@ Column2Width=242
 Column3Name=Graph Minimum
 Column3Type=Min
 Column3Width=120
-Column4Name=Graph Average
-Column4Type=Avg
+Column4Name=Average
+Column4Type=Real Avg
 Column4Width=120
 Column5Name=Graph Maximum
 Column5Type=Max

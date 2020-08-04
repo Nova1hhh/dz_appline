@@ -1,0 +1,82 @@
+﻿[Workspace]
+SessionStartTime=0
+SessionEndTime=4058
+VerNo=13
+IsSummaryData=0
+TimeFormat=0
+SesLang=RUS
+ABuild=0
+DataBaseName=resl101750390DB
+DBType=3
+CurrServer=DESKTOP-V2M51UN
+CurrUser=sa
+CurrPswd===
+StorageLoc=\\DESKTOP-V2M51UN\Data\
+PhStorageLoc=C:\MSSQL7\Data\
+LocStorageLoc=
+LocPhStorageLoc=
+WinIntSec=0
+UseNetworkMode=0
+UseParallel=1
+UseManagedIndexes=1
+UseSpecMSSQLParams=1
+NumResults=1
+
+[Data Config]
+CollectionMode=2
+IngnoreFlds=Vuser ID
+IngnoreUIFlds=VuserID
+AggSecGran=1
+TransAgg=1
+DataPointAgg=1
+WebAgg=1
+MonAgg=0
+ErrAgg=0
+FilterEdge=0
+FSartTime=0
+FEndTime=0
+
+[Result0]
+LRRID=
+ResultPath=C:\Users\Николай\AppData\Local\Temp\res\res.lrr
+ResultTDPath=
+NumFilters=1
+ScenarioTimeZone=-10800
+DaylightSavingSecsAddition=0
+ScenarioStartTime=1596510080
+ScenarioEndTime=1596514138
+ResInSD=0
+WebGran=5
+FilterEdge=0
+FSartTime=0
+FEndTime=0
+TDTestID=-1
+TDRunID=-1
+IsProTuneResult=0
+GraphScale=0
+Scenario Type=Manual
+Schedule Name=Schedule 1
+Mode=Scenario Scheduling
+Load Behavior=Initialize each Vuser just before it runs
+Scenario Duration=Start 32 Vusers: 2 every 00:00:03 (HH:MM:SS); Run for 01:03:00 (HH:MM:SS); Stop all Vusers: 2 every 00:00:01 (HH:MM:SS)
+NumGraphs=9
+
+[Result0_GLOBALFILTER0]
+DimensionType=Continuous
+InternalDimName=End Time
+Dimension=Scenario Elapsed Time
+EqualFlag=1
+DimensionTableName=Event_meter
+NumValues=1
+DimCount=2
+Dim_0=120.000000
+Dim_1=3720.000000
+
+[DimensionFunctions]
+DimeFuncCount=1
+DimeFuncType0=FuncFragment
+FunctionName_UI0=Think Time
+DimensionName_UI0=Transaction Response Time,Aminimum,Amaximum
+FunctionFragmentValues_UI0=-Include Think Time
+DimensionFragmentValues_UI0=!([Value]-[Think Time])!,!([Aminimum]-[Think Time])!,!([Amaximum]-[Think Time])!
+
