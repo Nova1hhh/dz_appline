@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="9" it="0" lt="9" ct="0" ts="1597222257343" s="false" lb="send_comment_1" rc="500" rm="" tn="2nd part (send comment) 1-1" dt="text" by="1166" sby="798" sc="1" ec="1" ng="1" na="2">
+  <responseHeader class="java.lang.String">HTTP/1.1 500 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 12 Aug 2020 08:50:57 GMT
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Referer: http://localhost:8080/guestbook.html
+Accept-Language: en-US,en;q=0.5
+Origin: http://localhost:8080
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0
+Accept: */*
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Host: localhost:8080
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;timestamp&quot;:1597222257351,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;org.h2.jdbc.JdbcSQLException&quot;,&quot;message&quot;:&quot;Значение слишком длинное для поля \&quot;USER VARCHAR(30) SELECTIVITY 2\&quot;: \&quot;STRINGDECODE(&apos;\\u0426\\u0435\\u043d\\u0442\\u0440\\u0430\\u043b\\u044c\\u043d\\u044b\\u0439 \\u0431\\u0430\\u043d\\u043a \\u0420\\u043e\\u0441\\u04... (37)\&quot;\nValue too long for column \&quot;USER VARCHAR(30) SELECTIVITY 2\&quot;: \&quot;STRINGDECODE(&apos;\\u0426\\u0435\\u043d\\u0442\\u0440\\u0430\\u043b\\u044c\\u043d\\u044b\\u0439 \\u0431\\u0430\\u043d\\u043a \\u0420\\u043e\\u0441\\u04... (37)\&quot;; SQL statement:\nINSERT INTO book(date, user, text) VALUES(NOW(), &apos;Центральный банк Российской Федерации&apos;, &apos;Благодарю за отличную работу!&apos;) [22001-194]&quot;,&quot;path&quot;:&quot;/service/guestbook&quot;}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8080/service/guestbook?user=Центральный%20банк%20Российской%20Федерации&amp;text=Благодарю%20за%20отличную%20работу!</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1597222257356" s="false" lb="send_comment_2" rc="200" rm="" tn="2nd part (send comment) 1-1" dt="text" by="10813" sby="298" sc="1" ec="1" ng="1" na="2">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Не найден комментарий в response</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 10537
+Date: Wed, 12 Aug 2020 08:50:57 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Referer: http://localhost:8080/guestbook.html
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0
+Accept: */*
+Host: localhost:8080
+</requestHeader>
+  <responseData class="java.lang.String">&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Газпромбанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Спутник&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ДжиИ Мани Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ДжиИ Мани Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ДжиИ Мани Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Газпромбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ДжиИ Мани Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Спутник&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ДжиИ Мани Банк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Газпромбанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Газпромбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Сбербанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ДжиИ Мани Банк&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Хоум Кредит энд Финанс Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Мегафон&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Спутник&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;ИБРАЭ&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;ТрансКредитБанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Sanofi&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8080/service/guestbook</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="1" ct="0" ts="1597222262572" s="false" lb="send_comment_2" rc="200" rm="" tn="2nd part (send comment) 1-1" dt="text" by="937" sby="298" sc="1" ec="1" ng="1" na="1">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Не найден комментарий в response</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 663
+Date: Wed, 12 Aug 2020 08:51:02 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Referer: http://localhost:8080/guestbook.html
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0
+Accept: */*
+Host: localhost:8080
+</requestHeader>
+  <responseData class="java.lang.String">&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8080/service/guestbook</java.net.URL>
+</httpSample>
+<httpSample t="1" it="0" lt="1" ct="0" ts="1597222264128" s="false" lb="send_comment_2" rc="200" rm="" tn="2nd part (send comment) 1-1" dt="text" by="1151" sby="298" sc="1" ec="1" ng="1" na="1">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Не найден комментарий в response</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 877
+Date: Wed, 12 Aug 2020 08:51:03 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Referer: http://localhost:8080/guestbook.html
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0
+Accept: */*
+Host: localhost:8080
+</requestHeader>
+  <responseData class="java.lang.String">&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;ВТБ 24&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;ОТП Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Альфа-Банк&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Эльдорадо&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;МТС Банк&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Райффайзенбанк&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Филип Морис Интернэшнл&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;БОЛЬ&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;МТС&lt;/b&gt;: &apos;Спасибо!&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Отличные ребята.&apos;&lt;br&gt;&lt;b&gt;Ренессанс Жизнь&lt;/b&gt;: &apos;Рекомендую&apos;&lt;br&gt;&lt;b&gt;Procter&lt;/b&gt;: &apos;Благодарю за отличную работу!&apos;&lt;br&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://localhost:8080/service/guestbook</java.net.URL>
+</httpSample>
+
+</testResults>
